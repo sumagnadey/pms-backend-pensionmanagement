@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS:ECS::Service
+      Properties:
+        TaskDefination: "arn:aws:ecs:us-west-2:860061945305:task-definition/sumagna-pension-management-task:1"
+        LoadBalancerInfo:
+          ContainerName: pension-management
+          ContainerPort: "8003"
+        PlatformVersion: "LATEST"
